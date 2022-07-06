@@ -1,0 +1,28 @@
+.input_label {
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  margin: 0 2rem;
+  border-radius: 10px;
+  background-color: var(--primary--dark-violet);
+}
+
+.input_text,
+.input_btn {
+  border-radius: 10px;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+}
+
+.input_text {
+  margin-bottom: 1rem;
+  font-family: var(--font);
+  outline: none;
+}
+.input_btn {
+  background-color: var(--primary-cyan);
+  font-family: var(--font);
+}

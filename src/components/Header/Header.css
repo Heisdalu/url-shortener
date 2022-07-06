@@ -63,6 +63,6 @@
   background-color: var(--primary-cyan);
   margin-bottom: 1.5rem;
   color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font);
   word-spacing: 3px;
 }
