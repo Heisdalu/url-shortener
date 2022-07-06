@@ -1,6 +1,13 @@
-const App = () => {
-    return <h1>hello</h1>
-}
+import Header from "./components/Header/Header";
 
+import "./App.css";
+
+const App = () => {
+  return (
+    <div className="main-container">
+      <Header />
+    </div>
+  );
+};
 
 export default App;
