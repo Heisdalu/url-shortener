@@ -4,9 +4,16 @@
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  margin: 0 2rem;
+  /* margin: 0 2rem; */
   border-radius: 10px;
   background-color: var(--primary--dark-violet);
+  position: absolute;
+  /* transform: translateY(-50%); */
+  max-width: 500px;
+  width: 90%;
+  /* margin: 0 1rem; */
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .input_text,

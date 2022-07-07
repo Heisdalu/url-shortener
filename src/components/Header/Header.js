@@ -34,7 +34,7 @@ const Header = () => {
           <button className="header_btn">Get Started</button>
         </div>
       </section>
-
+ 
       <GetLink />
     </div>
   );

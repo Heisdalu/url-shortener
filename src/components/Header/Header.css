@@ -1,4 +1,6 @@
-
+.header{
+    position: relative;
+}
 .header_box {
   display: flex;
   align-items: center;
@@ -61,7 +63,7 @@
   border: none;
   font-weight: 500;
   background-color: var(--primary-cyan);
-  margin-bottom: 1.5rem;
+  margin-bottom: 130px;
   color: #ffffff;
   font-family: var(--font);
   word-spacing: 3px;
