@@ -43,10 +43,15 @@ const Detail = () => {
           <h1 className="main_detail_title">Fully Customizable</h1>
           <p className="main_detail_content">
             Improve brand awareness and content discoverability through
-            customizable links, supercharging audience engagement.  
+            customizable links, supercharging audience engagement.
           </p>
         </article>
       </section>
+
+      <div className="other_detail">
+        <h1 className="other_detail_title">Boost your links today</h1>
+        <button className="other_detail_btn">Get started</button>
+      </div>
     </section>
   );
 };
