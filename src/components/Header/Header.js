@@ -1,4 +1,6 @@
-import Logo from "../../assets/logo.svg";
+// import Logo from "../../assets/logo.svg";
+import Logo from "./Logo";
+
 import Hamburger from "../../assets/illustration-working.svg";
 import GetLink from "./GetLink";
 import "./Header.css";
@@ -8,7 +10,7 @@ const Header = () => {
     <div className="header">
       <header className="header_box">
         <h1 className="header_title">
-          <img src={Logo} alt="Shortly logo" />
+          <Logo color="#34313D" />
         </h1>
 
         <button className="hamburger">
@@ -34,7 +36,7 @@ const Header = () => {
           <button className="header_btn">Get Started</button>
         </div>
       </section>
- 
+
       <GetLink />
     </div>
   );

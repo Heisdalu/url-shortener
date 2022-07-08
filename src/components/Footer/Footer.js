@@ -1,4 +1,4 @@
-import Logo from "../../assets/logo.svg";
+import Logo from "../Header/Logo";
 import instagram from "../../assets/icon-instagram.svg";
 import pinInterest from "../../assets/icon-pinterest.svg";
 import facebook from "../../assets/icon-facebook.svg";
@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <h1 className="footer_title">
-        <img src={Logo} alt="" />
+        <Logo color='#fff'/>
       </h1>
 
       <div className="main_footer">

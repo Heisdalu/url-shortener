@@ -1,5 +1,5 @@
-.header{
-    position: relative;
+.header {
+  position: relative;
 }
 .header_box {
   display: flex;
@@ -48,12 +48,12 @@
 }
 
 .header_detail {
-    font-weight: 500;
-    font-size: 1rem;
-    margin: 0 auto;
-    line-height: 1.5rem;
-    margin-bottom: 1.5rem;
-    max-width: 400px;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0 auto;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+  max-width: 400px;
 }
 
 .header_btn {

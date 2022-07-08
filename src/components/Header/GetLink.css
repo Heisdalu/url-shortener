@@ -4,16 +4,18 @@
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  /* margin: 0 2rem; */
   border-radius: 10px;
-  background-color: var(--primary--dark-violet);
+  /* background-color: var(--primary--dark-violet); */
   position: absolute;
-  /* transform: translateY(-50%); */
   max-width: 500px;
   width: 90%;
-  /* margin: 0 1rem; */
   left: 50%;
   transform: translate(-50%, -50%);
+  background-image: url('../../assets/bg-shorten-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 70% 80%;
+  background-position: top right;
+  background-color: var(--primary--dark-violet);
 }
 
 .input_text,
@@ -28,6 +30,7 @@
   margin-bottom: 1rem;
   font-family: var(--font);
   outline: none;
+  background-color: #ffffff;
 }
 .input_btn {
   background-color: var(--primary-cyan);
