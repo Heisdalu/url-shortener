@@ -2,9 +2,6 @@
   background-color: var(--neutral-gray);
   background-color: hsla(0, 0%, 75%, 0.244);
   padding-top: 150px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 1px;
 }
 
 .detail_header {
@@ -77,9 +74,9 @@
 }
 
 .other_detail {
-  height: 200px;
+  height: 250px;
   background-repeat: no-repeat;
-  /* background-size: 100% 100%; */
+  background-size: 100% 100%;
   background-image: url('../../assets//bg-boost-mobile.svg');
   background-color: var(--primary--dark-violet);
   display: flex;
@@ -104,4 +101,9 @@
   font-weight: 500;
   word-spacing: 3px;
   font-family: var(--font);
+}
+
+.detail_box1{
+ padding-left: 2rem;
+  padding-right: 2rem;
 }
