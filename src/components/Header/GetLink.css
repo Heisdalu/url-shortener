@@ -36,3 +36,25 @@
   background-color: var(--primary-cyan);
   font-family: var(--font);
 }
+
+@media screen and (min-width: 700px) {
+  .input_label {
+    width: 85%;
+    max-width: none;
+    flex-direction: row;
+    padding: 2rem;
+    background-image: url('../../assets//bg-shorten-desktop.svg');
+    background-size: 100% 100%;
+
+  }
+
+  .input_text {
+    margin-bottom: 0;
+    width: 80%;
+    margin-right: 1rem;
+  }
+
+  .input_btn {
+    width: 20%;
+  }
+}

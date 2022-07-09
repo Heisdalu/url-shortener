@@ -41,3 +41,33 @@
 .social_media_links span{
   margin: 0 12px;
 }
+
+
+@media screen and (min-width: 768px){
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: flex-start;
+  }
+
+  .main_footer {
+    flex-direction: row;
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .main_footer_title {
+    margin: 0;
+  }
+
+  .social_media_links {
+    margin: 0;
+    padding-top: 7px;
+  }
+
+  .social_media_links span{
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+}
