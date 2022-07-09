@@ -1,0 +1,109 @@
+.modal {
+  position: absolute;
+  top: 100px;
+  max-width: 400px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 0;
+  background-color: var(--primary--dark-violet);
+  border-radius: 10px;
+  z-index: 11;
+}
+
+.modal_1 {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  align-items: center;
+  text-align: center;
+}
+
+.modal_1::after {
+  content: "";
+  background-color: var(--neutral-gray);
+  width: 80%;
+  height: 1px;
+}
+
+.modal_1 a {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.modal_2 {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal_2 button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  width: 80%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: none;
+  font-family: var(--font);
+  color: #ffffff;
+}
+
+
+.login_btn{
+    background: none;
+}
+
+.sign_btn{
+    background-color: var(--primary-cyan);
+}
+
+@media screen  and (min-width: 768px){
+    .modal {
+        position: relative;
+        top: 0;
+        transform: translateX(0);
+        left: 0;
+        max-width: none;
+        width: 100%;
+        display: flex;
+        padding: 0;
+        background: none;
+    }    
+
+    .modal_1, .modal_2 {
+        flex-direction: row;
+        display: block;
+    }
+    .modal_1 {
+        font-size: 1rem;
+    }
+
+    .modal_1 a {
+        color: var(--neutral-gray);
+        margin-left: 2rem ;
+    }
+
+    .modal_2{
+        margin-left: auto;
+        margin-top: -10px;
+
+    }
+
+    .modal_2 button {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        margin-left: 1rem;
+        color: var(--neutral-gray);
+        font-size: 1rem;
+    }
+
+    .modal_2 .sign_btn{
+        padding: 10px 2rem;
+        margin-left: 2rem;
+        color: #ffffff;
+        border-radius: 50px;
+    }
+}
