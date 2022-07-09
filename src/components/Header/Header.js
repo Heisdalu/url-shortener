@@ -1,5 +1,6 @@
-// import Logo from "../../assets/logo.svg";
 import Logo from "./Logo";
+
+import Modal from "./Modal";
 
 import Hamburger from "../../assets/illustration-working.svg";
 import GetLink from "./GetLink";
@@ -18,6 +19,8 @@ const Header = () => {
           <div className="burger"></div>
           <div className="burger"></div>
         </button>
+
+        <Modal />
       </header>
 
       <section className="header_contents">
