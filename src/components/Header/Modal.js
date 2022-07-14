@@ -2,9 +2,10 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import "./Modal.css";
 
-const Modal = () => {
+const Modal = (props) => {
+  const active = !props.active && `hidden`;
   return (
-    <nav className="modal">
+    <nav className= {`modal ${active}`}>
       <div className="modal_1">
         <a href="#">Features</a>
         <a href="#">Pricing</a>

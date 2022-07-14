@@ -5,8 +5,15 @@ import Modal from "./Modal";
 import Hamburger from "../../assets/illustration-working.svg";
 import GetLink from "./GetLink";
 import "./Header.css";
+import { useState } from "react";
 
 const Header = () => {
+  const [active, setActive] = useState(false);
+
+  const toggle = () => {
+    setActive((prevState) => !prevState);
+  };
+
   return (
     <div className="header">
       <header className="header_box">
@@ -14,13 +21,13 @@ const Header = () => {
           <Logo color="#34313D" />
         </h1>
 
-        <button className="hamburger">
+        <button className="hamburger" onClick={toggle}>
           <div className="burger"></div>
           <div className="burger"></div>
           <div className="burger"></div>
         </button>
 
-        <Modal />
+        <Modal active={active}/>
       </header>
 
       <section className="header_contents">

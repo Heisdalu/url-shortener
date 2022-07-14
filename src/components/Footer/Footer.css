@@ -33,6 +33,11 @@
   margin: 0.5rem 0 1rem 0;
 }
 
+.feature_inner p:hover{
+  color: var(--primary-cyan);
+  cursor: pointer;
+}
+
 .social_media_links{
   /* margin: 2rem 0; */
   margin-top: 2rem;
