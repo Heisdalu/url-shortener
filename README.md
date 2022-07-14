@@ -1,8 +1,8 @@
-# IP Tracker
+# URL SHORTENER
 
 ## Table of contents
 
-- [IP Tracker](#ip-tracker)
+- [URL SHORTENER](#url-shortener)
   - [Table of contents](#table-of-contents)
     - [The challenge](#the-challenge)
     - [Links](#links)
@@ -13,11 +13,16 @@
 
 Users should be able to:
 
-- Search Ip addresses and view vital inforamtions of searched Ip addresses respectively.
+- View the optimal layout for the site depending on their device's screen size
+- Shorten any valid URL
+- See a list of their shortened links, even after refreshing the browser
+- Copy the shortened link to their clipboard in a single click
+- Receive an error message when the `form` is submitted if:
+  - The `input` field is empty
 
 ### Links
 
-- Live Site URL: [click here](https://daalu-ip-tracker.netlify.app/)
+- Live Site URL: [click here]()
 
 ### Built with
 
@@ -26,6 +31,7 @@ Users should be able to:
 - CSS custom properties
 - CSS Grid
 - REACT
+- REDUX/REDUX TOOLKIT
 
 ## Author
 
