@@ -37,6 +37,11 @@
   font-family: var(--font);
 }
 
+.input_btn:active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 @media screen and (min-width: 700px) {
   .input_label {
     width: 85%;

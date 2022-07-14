@@ -1,7 +1,16 @@
 .detail_box {
   background-color: var(--neutral-gray);
   background-color: hsla(0, 0%, 75%, 0.244);
-  padding-top: 150px;
+  padding-top: 100px;
+}
+
+.detail_link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+  margin-bottom: 4rem;
+  font-size: 1rem;
 }
 
 .detail_header {
@@ -109,6 +118,12 @@
   font-weight: 500;
   word-spacing: 3px;
   font-family: var(--font);
+  cursor: pointer;
+}
+
+.other_detail_btn:hover{
+  opacity: 0.5;
+  transition: all 0.5s;
 }
 
 .detail_box1 {
@@ -159,6 +174,10 @@
 }
 
 @media screen and (min-width: 768px) {
+
+  .detail_link {
+    margin-top: -20px;
+  }
   .other_detail {
     background-image: url("../../assets/bg-boost-desktop.svg");
   }

@@ -1,6 +1,17 @@
 import "./GetLink.css";
+import { useDispatch, useSelector } from "react-redux";
+import { getShortenLink } from "../../store/shortenLink";
 
 const GetLink = () => {
+  const dispatch = useDispatch();
+  const val = useSelector((state) => state);
+  console.log(val);
+
+
+  const shortenLinkHandler = () => {
+    dispatch(getShortenLink());
+  };
+
   return (
     <div className="input_label">
       <input
@@ -9,7 +20,9 @@ const GetLink = () => {
         className="input_text"
         arial-label="Enter url"
       />
-      <button type="submit" className='input_btn'>Shorten It!</button>
+      <button type="submit" className="input_btn" onClick={shortenLinkHandler}>
+        Shorten It!
+      </button>
     </div>
   );
 };

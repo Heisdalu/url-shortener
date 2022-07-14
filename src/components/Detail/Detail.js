@@ -1,10 +1,15 @@
 import "./Detail.css";
 import Image1 from "../../assets/icon-brand-recognition.svg";
 import Image2 from "../../assets/icon-detailed-records.svg";
+import LinkDetail from "./LinkDetail";
 
 const Detail = () => {
   return (
     <section className="detail_box">
+      <section className="detail_link">
+        <LinkDetail />
+      </section>
+
       <section className="detail_box1">
         <header className="detail_header">
           <h1 className="detail_header_title">Advanced Statisitcs</h1>
