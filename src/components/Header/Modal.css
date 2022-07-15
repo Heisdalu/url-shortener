@@ -63,51 +63,5 @@
 
   .modal {
     display: none;
-  }
-    /* .modal { */
-        /* position: relative;
-        top: 0;
-        transform: translateX(0);
-        left: 0;
-        max-width: none;
-        width: 100%;
-        display: flex;
-        padding: 0;
-        background: none;
-    }    
-
-    .modal_1, .modal_2 {
-        flex-direction: row;
-        display: block;
-    }
-    .modal_1 {
-        font-size: 1rem;
-    }
-
-    .modal_1 a {
-        color: var(--neutral-gray);
-        margin-left: 2rem ;
-    }
-
-    .modal_2{
-        margin-left: auto;
-        margin-top: -10px;
-
-    }
-
-    .modal_2 button {
-        margin: 0;
-        padding: 0;
-        width: auto;
-        margin-left: 1rem;
-        color: var(--neutral-gray);
-        font-size: 1rem;
-    }
-
-    .modal_2 .sign_btn{
-        padding: 10px 2rem;
-        margin-left: 2rem;
-        color: #ffffff;
-        border-radius: 50px;
-    } */
+  } 
 }
