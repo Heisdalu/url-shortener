@@ -21,6 +21,17 @@ const Header = () => {
           <Logo color="#34313D" />
         </h1>
 
+        <nav className="desktop_modal desktop_main_modal">
+          <a href="#">Features</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+
+        <div className="desktop_modal desktop_navigate">
+          <button>Login</button>
+          <button className="desktop_sign_up">Sign Up</button>
+        </div>
+
         <button className="hamburger" onClick={toggle}>
           <div className="burger"></div>
           <div className="burger"></div>

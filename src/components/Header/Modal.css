@@ -60,8 +60,12 @@
 }
 
 @media screen  and (min-width: 768px){
-    .modal {
-        position: relative;
+
+  .modal {
+    display: none;
+  }
+    /* .modal { */
+        /* position: relative;
         top: 0;
         transform: translateX(0);
         left: 0;
@@ -105,5 +109,5 @@
         margin-left: 2rem;
         color: #ffffff;
         border-radius: 50px;
-    }
+    } */
 }
