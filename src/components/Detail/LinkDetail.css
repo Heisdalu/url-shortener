@@ -18,6 +18,10 @@
   margin: 0.5rem 0;
 }
 
+.shorten_link {
+  color: var(--primary-cyan);
+}
+
 .main_content {
   word-wrap: break-word;
 }
@@ -41,9 +45,10 @@
   .detail_link_content {
     flex-direction: row;
     justify-content: normal;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     width: 85%;
     max-width: none;
+    font-size: 1rem;
   }
 
   .shorten_link,
