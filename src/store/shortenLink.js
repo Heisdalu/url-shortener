@@ -1,21 +1,35 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = { error: false, data: {}, message: null };
+const initialState = {
+  error: false,
+  data: [
+    {
+      shortLink: "lol",
+      originalLink: "gee",
+      id: `${Math.random().toString(36)}`,
+    },
+    {
+      shortLink: "shee.ckd",
+      originalLink: "google.com",
+      id: `${Math.random().toString(36)}`,
+    },
+  ],
+  message: null,
+};
 
 const shortenLinkSlice = createSlice({
   name: "shortenLink",
   initialState,
   reducers: {
     shortenLinkSuccess(state, action) {
-        console.log(state, action);
+      console.log(state, action);
       state.error = false;
-      state.data = action.payload.data;
+      state.data.push(action.payload);
       state.message = null;
     },
     shortenLinkFailure(state, action) {
       state.error = true;
-      state.data = {};
       state.message = action.payload.message;
     },
   },
@@ -29,11 +43,13 @@ export const getShortenLink = (link = {}) => {
   return async (dispatch) => {
     try {
       const res = await axios.get(
-        "https://api.shrtco.de/v2/shorten?url=google.com"
+        `https://api.shrtco.de/v2/shorten?url=${link}`
       );
+      console.log(res);
       dispatch(
         shortenLinkAction.shortenLinkSuccess({
-          data: res.data,
+          shortLink: res.data.result.short_link,
+          originalLink: res.data.result.original_link,
         })
       );
     } catch (err) {
