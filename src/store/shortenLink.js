@@ -4,18 +4,7 @@ import axios from "axios";
 const initialState = {
   loading: false,
   error: false,
-  data: [
-    {
-      shortLink: "lol",
-      originalLink: "gee",
-      id: `${Math.random().toString(36)}`,
-    },
-    {
-      shortLink: "shee.ckd",
-      originalLink: "google.com",
-      id: `${Math.random().toString(36)}`,
-    },
-  ],
+  data: [],
   message: null,
 };
 
@@ -24,9 +13,8 @@ const shortenLinkSlice = createSlice({
   initialState,
   reducers: {
     shortenLinkSuccess(state, action) {
-      console.log(state, action);
       state.error = false;
-      state.data.push(action.payload);
+      state.data.unshift(action.payload);
       state.message = null;
       state.loading = false;
     },
@@ -35,23 +23,27 @@ const shortenLinkSlice = createSlice({
       state.error = true;
       state.message = action.payload.message;
     },
-    shortenLinkLoading(state, action) {
+    shortenLinkLoading(state) {
       state.loading = true;
+    },
+    shortenLinkReset(state) {
+      state.message = "";
+      state.error = false;
+      state.loading = false;
     },
   },
 });
 
-const shortenLinkAction = shortenLinkSlice.actions;
+export const shortenLinkAction = shortenLinkSlice.actions;
 const store = configureStore(shortenLinkSlice);
 
 export const getShortenLink = (link = {}) => {
   return async (dispatch) => {
-    dispatch(shortenLinkAction.shortenLinkLoading())
+    dispatch(shortenLinkAction.shortenLinkLoading());
     try {
       const res = await axios.get(
         `https://api.shrtco.de/v2/shorten?url=${link}`
       );
-      console.log(res);
       dispatch(
         shortenLinkAction.shortenLinkSuccess({
           id: `${Math.random().toString(36)}`,
@@ -60,7 +52,6 @@ export const getShortenLink = (link = {}) => {
         })
       );
     } catch (err) {
-      console.log(err);
       dispatch(
         shortenLinkAction.shortenLinkFailure({
           message: err.message,
