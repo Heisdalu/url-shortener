@@ -19,6 +19,7 @@
 
 .shorten_link {
   color: var(--primary-cyan);
+  text-decoration: none;
 }
 
 .main_content {

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getShortenLink, shortenLinkAction } from "../../store/shortenLink";
 import "./GetLink.css";
-import Loader from "./Loader";
+import Loader from "../Header/Loader";
 
 const GetLink = () => {
   const dispatch = useDispatch();

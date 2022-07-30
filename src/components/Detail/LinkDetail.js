@@ -18,7 +18,14 @@ const LinkDetail = () => {
     return (
       <div className="detail_link_content" key={detail.id}>
         <div className="main_content">{detail?.originalLink}</div>
-        <div className="shorten_link">{detail?.shortLink}</div>
+        <a
+          href={detail?.shortLink}
+          target="_blank"
+          className="shorten_link"
+          rel="noreferrer"
+        >
+          {detail?.shortLink}
+        </a>
         <button
           arial-role="copy"
           className="copy_btn"

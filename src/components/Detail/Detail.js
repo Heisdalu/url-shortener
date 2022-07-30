@@ -1,7 +1,7 @@
 import "./Detail.css";
 import Image1 from "../../assets/icon-brand-recognition.svg";
 import Image2 from "../../assets/icon-detailed-records.svg";
-import GetLink from "../Header/GetLink";
+import GetLink from "./GetLink";
 import LinkDetail from "./LinkDetail";
 
 const Detail = () => {
