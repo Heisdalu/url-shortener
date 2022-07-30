@@ -1,11 +1,15 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getShortenLink } from "../../store/shortenLink";
 import "./GetLink.css";
+import Loader from "./Loader";
 
 const GetLink = () => {
   const dispatch = useDispatch();
   const [inputLink, setInputLink] = useState("");
+  const loadingState = useSelector((state) => state.loading);
+
+  console.log(loadingState);
 
   const inputHandler = (e) => {
     setInputLink(e.target.value);
@@ -30,8 +34,14 @@ const GetLink = () => {
         value={inputLink}
       />
       <button type="submit" className="input_btn" onClick={shortenLinkHandler}>
-        Shorten It!
+        {loadingState ? <Loader /> : "Shorten It!"}
       </button>
+      
+      <div className="error-page">
+         <h1 className="error_header"> Input a Valid url</h1>
+         <button className="error_exit">Exit</button>
+      </div>
+      ;
     </div>
   );
 };

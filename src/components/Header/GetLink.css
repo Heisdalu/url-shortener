@@ -4,18 +4,14 @@
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
+  width: 100%;
   border-radius: 10px;
-  /* background-color: var(--primary--dark-violet); */
-  position: absolute;
-  max-width: 500px;
-  width: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: url('../../assets/bg-shorten-mobile.svg');
+  background-image: url("../../assets/bg-shorten-mobile.svg");
   background-repeat: no-repeat;
   background-size: 70% 80%;
   background-position: top right;
   background-color: var(--primary--dark-violet);
+  transform: translateY(-50%);
 }
 
 .input_text,
@@ -42,15 +38,48 @@
   color: #ffffff;
 }
 
+.error-page {
+  position: absolute;
+  height: 100%;
+  background-color: #ffffff;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  display: none;
+}
+
+.error_header {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+  color: #f5f5f5;
+  color: red;
+}
+
+.error_exit {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  background-color: black;
+  color: #ffffff;
+}
+
+.error_exit:active {
+  background-color: #ffffff;
+  color: black;
+} 
+
 @media screen and (min-width: 700px) {
   .input_label {
-    width: 85%;
     max-width: none;
     flex-direction: row;
     padding: 2rem;
-    background-image: url('../../assets//bg-shorten-desktop.svg');
+    background-image: url("../../assets//bg-shorten-desktop.svg");
     background-size: 100% 100%;
-
   }
 
   .input_text {
