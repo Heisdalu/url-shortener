@@ -2,6 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
+  loading: false,
   error: false,
   data: [
     {
@@ -27,10 +28,15 @@ const shortenLinkSlice = createSlice({
       state.error = false;
       state.data.push(action.payload);
       state.message = null;
+      state.loading = false;
     },
     shortenLinkFailure(state, action) {
+      state.loading = false;
       state.error = true;
       state.message = action.payload.message;
+    },
+    shortenLinkLoading(state, action) {
+      state.loading = true;
     },
   },
 });
@@ -39,8 +45,8 @@ const shortenLinkAction = shortenLinkSlice.actions;
 const store = configureStore(shortenLinkSlice);
 
 export const getShortenLink = (link = {}) => {
-  console.log(link);
   return async (dispatch) => {
+    dispatch(shortenLinkAction.shortenLinkLoading())
     try {
       const res = await axios.get(
         `https://api.shrtco.de/v2/shorten?url=${link}`
@@ -48,6 +54,7 @@ export const getShortenLink = (link = {}) => {
       console.log(res);
       dispatch(
         shortenLinkAction.shortenLinkSuccess({
+          id: `${Math.random().toString(36)}`,
           shortLink: res.data.result.short_link,
           originalLink: res.data.result.original_link,
         })
