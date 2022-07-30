@@ -47,7 +47,6 @@ const GetLink = () => {
           </button>
         </div>
       )}
-      ;
     </div>
   );
 };
