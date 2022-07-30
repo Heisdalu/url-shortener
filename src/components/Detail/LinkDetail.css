@@ -1,16 +1,15 @@
 .detail_link_content {
   word-wrap: break-word;
-  margin: 0.5rem 0;
-  border: 1px solid;
+  margin: 1rem 0;
   border-radius: 10px;
-  width: 90%;
-  max-width: 500px;
+  padding: 0.5rem 1rem;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
+
+
 
 .main_content,
 .shorten_link,
@@ -24,11 +23,12 @@
 
 .main_content {
   word-wrap: break-word;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--neutral-gray);
 }
 
 .copy_btn {
-  width: 100px;
-  height: 35px;
+  padding: 1rem;
   border-radius: 5px;
   background-color: cyan;
   color: #ffffff;
@@ -42,33 +42,25 @@
 }
 
 @media screen and (min-width: 768px) {
+  .main_content {
+    border: none;
+  }
+
+  .copy_btn {
+    width: 100px;
+    height: 35px;
+    padding: 0;
+  }
   .detail_link_content {
     flex-direction: row;
     justify-content: normal;
+    align-items: center;
     padding: 0.5rem 1rem;
-    width: 85%;
-    max-width: none;
     font-size: 1rem;
-  }
-
-  .shorten_link,
-  .detail_link,
-  .copy_btn {
-    margin: 0;
-  }
-
-  .main_content{
-    width: 350px;
   }
 
   .shorten_link {
     margin-left: auto;
     margin-right: 1rem;
   }
-}
-
-@media screen and (min-width: 1000px) {
-    .main_content {
-        width: 500px;
-    }
 }

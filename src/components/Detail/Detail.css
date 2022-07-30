@@ -1,7 +1,6 @@
 .detail_box {
   background-color: var(--neutral-gray);
   background-color: hsla(0, 0%, 75%, 0.244);
-  padding-top: 100px;
 }
 
 .detail_link {
@@ -11,6 +10,7 @@
   place-items: center;
   margin-bottom: 4rem;
   font-size: 1rem;
+  padding: 0 1rem;
 }
 
 .detail_header {
@@ -126,9 +126,14 @@
   transition: all 0.5s;
 }
 
-.detail_box1 {
-  padding-left: 2rem;
-  padding-right: 2rem;
+
+.detail_link_content_box{
+  width: 100%;
+  margin-top: -50px;
+}
+
+.detail_box1{
+  padding: 0 1rem;
 }
 
 @media screen and (min-width: 1200px) {
@@ -142,7 +147,6 @@
   .main_detail_box {
     margin-right: 1.5rem;
     text-align: left;
-    /* padding: 0 1.5rem; */
     padding-left: 2rem;
     padding-right: 2rem;
     align-items: normal;
@@ -175,9 +179,10 @@
 
 @media screen and (min-width: 768px) {
 
-  .detail_link {
-    margin-top: -20px;
+  .detail_link{
+    padding: 0 3rem;
   }
+
   .other_detail {
     background-image: url("../../assets/bg-boost-desktop.svg");
   }

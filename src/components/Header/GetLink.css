@@ -50,17 +50,17 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  display: none;
 }
 
 .error_header {
   font-size: 1.2rem;
   margin-bottom: 4px;
-  color: #f5f5f5;
   color: red;
+  text-align: center;
 }
 
 .error_exit {
+  margin-top: 5px;
   padding: 1rem 2rem;
   border-radius: 50px;
   border: none;
@@ -71,7 +71,7 @@
 .error_exit:active {
   background-color: #ffffff;
   color: black;
-} 
+}
 
 @media screen and (min-width: 700px) {
   .input_label {

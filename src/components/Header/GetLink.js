@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getShortenLink } from "../../store/shortenLink";
+import { getShortenLink, shortenLinkAction } from "../../store/shortenLink";
 import "./GetLink.css";
 import Loader from "./Loader";
 
@@ -8,19 +8,22 @@ const GetLink = () => {
   const dispatch = useDispatch();
   const [inputLink, setInputLink] = useState("");
   const loadingState = useSelector((state) => state.loading);
+  const state = useSelector((state) => state);
 
-  console.log(loadingState);
 
   const inputHandler = (e) => {
     setInputLink(e.target.value);
   };
 
   const shortenLinkHandler = () => {
-    console.log(inputLink);
     if (inputLink) {
       dispatch(getShortenLink(inputLink));
     }
     setInputLink("");
+  };
+
+  const exitErrorModalHandler = () => {
+    dispatch(shortenLinkAction.shortenLinkReset());
   };
 
   return (
@@ -36,11 +39,14 @@ const GetLink = () => {
       <button type="submit" className="input_btn" onClick={shortenLinkHandler}>
         {loadingState ? <Loader /> : "Shorten It!"}
       </button>
-      
-      <div className="error-page">
-         <h1 className="error_header"> Input a Valid url</h1>
-         <button className="error_exit">Exit</button>
-      </div>
+      {state.error && (
+        <div className="error-page">
+          <h1 className="error_header"> {state.message}</h1>
+          <button className="error_exit" onClick={exitErrorModalHandler}>
+            Go back
+          </button>
+        </div>
+      )}
       ;
     </div>
   );

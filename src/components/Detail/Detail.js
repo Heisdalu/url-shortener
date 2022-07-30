@@ -1,13 +1,19 @@
 import "./Detail.css";
 import Image1 from "../../assets/icon-brand-recognition.svg";
 import Image2 from "../../assets/icon-detailed-records.svg";
+import GetLink from "../Header/GetLink";
 import LinkDetail from "./LinkDetail";
 
 const Detail = () => {
   return (
     <section className="detail_box">
       <section className="detail_link">
+        <GetLink />
+
+     <div className="detail_link_content_box">
         <LinkDetail />
+
+     </div>
       </section>
 
       <section className="detail_box1">

@@ -3,12 +3,13 @@ import Logo from "./Logo";
 import Modal from "./Modal";
 
 import Hamburger from "../../assets/illustration-working.svg";
-import GetLink from "./GetLink";
 import "./Header.css";
 import { useState } from "react";
 
 const Header = () => {
   const [active, setActive] = useState(false);
+
+  const animateBurger = active ? 'burger-line' : ''
 
   const toggle = () => {
     setActive((prevState) => !prevState);
@@ -32,13 +33,13 @@ const Header = () => {
           <button className="desktop_sign_up">Sign Up</button>
         </div>
 
-        <button className="hamburger" onClick={toggle}>
-          <div className="burger"></div>
-          <div className="burger"></div>
-          <div className="burger"></div>
+        <button className="hamburger" arial-role="menu-list" onClick={toggle}>
+          <div className={`burger ${animateBurger}`}></div>
+          <div className={`burger ${animateBurger}`}></div>
+          <div className={`burger ${animateBurger}`}></div>
         </button>
 
-        <Modal active={active}/>
+        <Modal active={active} />
       </header>
 
       <section className="header_contents">
@@ -57,8 +58,6 @@ const Header = () => {
           <button className="header_btn">Get Started</button>
         </div>
       </section>
-
-      <GetLink />
     </div>
   );
 };

@@ -50,6 +50,7 @@
 
 @media screen and (min-width: 768px){
   .footer {
+    /* padding: 3rem 2rem; */
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: flex-start;
