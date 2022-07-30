@@ -3,7 +3,6 @@ import "./LinkDetail.css";
 
 const LinkDetail = () => {
   const data = useSelector((state) => state.data);
-  console.log(data);
 
   const linkContent = (detail) => {
     const copyHandler = (el) => {
